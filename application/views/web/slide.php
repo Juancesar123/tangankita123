@@ -75,12 +75,13 @@ Additional Styles (required)
             ================================================== -->            
             <div id="myCarouselku" class="carousel slide">
                 <div class="carousel-inner">
+				<?php
 				$f=0;
-				for($i=0;$i<3;$i++){
+				for($i=0;$i<count($event);$i++){
                     If($i==($f+3)) {
-					<div class="item active">
+					echo"<div class=\"item active\">
 					
-                        <div class="row">
+                        <div class=\"row\">";
 					}
 						
                             echo"<div class=\"col-md-3\"><a href=\"#\" class=\"thumbnail\"><img class=\"img-responsive\" src=\"".$event[$i]->gambar."\" alt=\"".$event[$i]->judul."\"></a>
@@ -92,9 +93,9 @@ Additional Styles (required)
 						}
                             
 							
-                        </div>
-                    </div>
-                    
+                       echo"</div>" ;
+                    echo"</div>";
+                ?>    
                   
                 </div>
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
